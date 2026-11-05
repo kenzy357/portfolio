@@ -4,8 +4,11 @@ order: 9
 place: ETH Zurich
 status: Course series
 realHardware: false
-summary: Shortest-path search, sampling-based planners, collision checking, planning under uncertainty and multi-agent coordination.
+summary: >-
+  Shortest-path search, sampling-based planners, collision checking, planning
+  under uncertainty and multi-agent coordination.
 bullets: []
 tools:
-- Python
+  - Python
+  - Docker
 figure: rrt
