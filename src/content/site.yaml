@@ -1,13 +1,9 @@
 name: Kenzy Hasnaoui
 eyebrow: Robotics  |  Autonomous systems  |  Planning  |  Robot learning
-intro: >-
-  I build the software that makes robots autonomous: control, motion planning
-  and reinforcement learning. M.Sc. Mechanical Engineering student at ETH
-  Zurich.
+intro: M.Sc. Mechanical Engineering student at ETH Zurich.
 currently: >-
-  Currently: innovation engineer with Johnson & Johnson at the ETH Exploration
-  Lab. Before that, autonomous navigation at ETH CRATER, winning the autonomous
-  navigation task at the European Rover Challenge 2026.
+  I build the software that makes robots autonomous: control, motion planning
+  and reinforcement learning. 
 photo: /images/photo.jpg
 photoCaption: ETH Zurich · EPFL · POSTECH
 email: kenzyhasnaoui@gmail.com
