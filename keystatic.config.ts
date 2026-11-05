@@ -44,9 +44,11 @@ const projectLinks = (label: string) =>
 
 export default config({
   // Local mode when you run `npm run dev`; GitHub mode on the live site, so every save is a commit.
-  storage: import.meta.env?.PROD
-    ? { kind: 'github', repo: 'kenzy357/portfolio' }
-    : { kind: 'local' },
+  // Set PUBLIC_KEYSTATIC_GITHUB=true locally once to run the GitHub App setup (see README).
+  storage:
+    import.meta.env?.PROD || import.meta.env?.PUBLIC_KEYSTATIC_GITHUB === 'true'
+      ? { kind: 'github', repo: 'kenzy357/portfolio' }
+      : { kind: 'local' },
   ui: {
     brand: { name: 'Kenzy · Portfolio' },
     navigation: {

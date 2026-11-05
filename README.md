@@ -36,10 +36,7 @@ On the live site it saves to GitHub, and Vercel redeploys automatically.
 ### 2. Connect Keystatic to GitHub (so `/keystatic` works on the live site)
 Keystatic needs a small GitHub App so it can commit on your behalf. It creates it for you:
 
-1. Run `npm run dev` locally and open `http://localhost:4321/keystatic`.
-   Because the config switches to GitHub mode only in production, temporarily run
-   `npm run build && npm run preview` **or** change `import.meta.env?.PROD` to `true` in
-   `keystatic.config.ts` for this step only.
+1. Locally, run `PUBLIC_KEYSTATIC_GITHUB=true npm run dev` and open `http://localhost:4321/keystatic`.
 2. Follow the on-screen "Create GitHub App" flow. Name it e.g. `kenzy-portfolio-keystatic`, install it
    on the `portfolio` repo only.
 3. Keystatic writes these to a local `.env` file:
@@ -50,7 +47,7 @@ Keystatic needs a small GitHub App so it can commit on your behalf. It creates i
 4. Copy all four into Vercel → **Settings → Environment Variables**, then **Redeploy**.
 5. In the GitHub App settings, add the callback URL
    `https://<your-domain>/api/keystatic/github/oauth/callback`.
-6. Revert the temporary change from step 1 if you made it. Never commit `.env`.
+6. Never commit `.env` (it is already in `.gitignore`).
 
 Then: open `https://<your-domain>/keystatic`, sign in with GitHub, edit, **Save**. Each save is a commit; Vercel rebuilds in about a minute.
 
