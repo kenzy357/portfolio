@@ -4,13 +4,21 @@ order: 4
 place: ETH Zurich
 status: Simulation
 realHardware: false
-summary: A receding-horizon controller that lands under thruster, nozzle and mass faults where a PID baseline crashes.
+summary: >-
+  A receding-horizon controller that lands under thruster, nozzle and mass
+  faults where a PID baseline crashes.
 bullets:
-- 'Linear MPC as a QP solved with OSQP: 10-step horizon, 0.1 s sampling, thrust, gimbal, position and tilt constraints. Replaced a three-loop PID.'
-- The PID crashes with degraded side thrusters, limited nozzle range and a 10% mass error. The same MPC tuning lands in every case, including combined and stronger faults.
-- Identified deployment risks (real-time solver bounds, linearization validity, constraint feasibility, state estimation) and presented them to a CTO-style audience.
+  - >-
+    Linear MPC as a QP solved with OSQP: 10-step horizon, 0.1 s sampling,
+    thrust, gimbal, position and tilt constraints. Replaced a three-loop PID.
+  - >-
+    The PID crashes with degraded side thrusters, limited nozzle range and a 10%
+    mass error. The same MPC tuning lands in every case, including combined and
+    stronger faults.
+  - >-
+    Identified deployment risks (real-time solver bounds, linearization
+    validity, constraint feasibility, state estimation) and presented them to a
+    CTO-style audience.
 tools:
-- Python
-- OSQP
-- Jupyter
+  - Python
 figure: rocket
