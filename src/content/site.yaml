@@ -1,18 +1,25 @@
 name: Kenzy Hasnaoui
-eyebrow: Robotics  |  Control  |  Robot learning
-intro: M.Sc. Mechanical Engineering student at ETH Zurich, building controllers, planners and learned policies for robots, from simulation to real hardware.
-currently: 'Currently: innovation engineer with Johnson & Johnson at the ETH Exploration Lab. Before that, autonomous navigation at ETH CRATER, winning the autonomous navigation task at the European Rover Challenge 2026.'
-photo: /images/kenzy.jpg
+eyebrow: Robotics  |  Autonomous systems  |  Planning  |  Robot learning
+intro: >-
+  M.Sc. Mechanical Engineering student at ETH Zurich, building controllers,
+  planners and learned policies for robots, from simulation to real hardware.
+currently: >-
+  Currently: innovation engineer with Johnson & Johnson at the ETH Exploration
+  Lab. Before that, autonomous navigation at ETH CRATER, winning the autonomous
+  navigation task at the European Rover Challenge 2026.
+photo: /images/photo.jpg
 photoCaption: ETH Zurich · EPFL · POSTECH
 email: kenzyhasnaoui@gmail.com
 linkedin: https://linkedin.com/in/kenzy-hasnaoui-582230341
 location: Zurich, CH
 stats:
-- value: '13'
-  label: projects
-- value: '5'
-  label: on real hardware
-- value: ERC 2026
-  label: nav winner
+  - value: '13'
+    label: projects
+  - value: '5'
+    label: on real hardware
+  - value: ERC 2026
+    label: nav winner
 contactTitle: Get in touch
-contactText: Questions about a project, or want to see one running? Reach me by email or on LinkedIn.
+contactText: >-
+  Questions about a project, or want to see one running? Reach me by email or on
+  LinkedIn.
