@@ -1,0 +1,14 @@
+title: Engine idle speed controller
+code: P-07
+order: 8
+place: ETH Zurich
+status: Real engine
+realHardware: true
+summary: Model-based controller for a spark-ignited engine using throttle and ignition timing, validated on a real engine.
+bullets:
+- Modelled the full engine dynamics.
+- Designed a feedback controller that holds idle speed under varying load.
+tools:
+- MATLAB
+- Simulink
+figure: idle

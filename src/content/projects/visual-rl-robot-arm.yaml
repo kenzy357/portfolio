@@ -1,0 +1,19 @@
+title: Visual RL on a real robot arm
+code: P-01
+order: 1
+place: ETH Zurich
+status: Real robot
+realHardware: true
+summary: Sim-to-real reinforcement learning for colour-conditioned pick-and-place and multi-cube sorting on an SO-101 arm.
+bullets:
+- Extended Squint (visual SAC) to train cube-splitting and colour-conditioned pick-and-place policies in simulation, with domain randomisation for transfer.
+- Deployed on a real SO-101 arm, using FastSAM background masking to bridge the visual gap.
+- RL handles separation and approach; the final grasp uses IK-based Cartesian descent with closed-loop vision correction.
+tools:
+- Python
+- PyTorch
+- ManiSkill3
+- IsaacLab
+- LeRobot
+- FastSAM
+figure: arm

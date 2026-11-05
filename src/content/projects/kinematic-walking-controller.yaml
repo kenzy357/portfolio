@@ -1,0 +1,17 @@
+title: Kinematic walking controller
+code: P-02
+order: 2
+place: ETH Zurich
+status: Real hexapod
+realHardware: true
+summary: A generic FK/IK locomotion pipeline for a quadruped, a biped and a hexapod, deployed on real hexapod hardware.
+bullets:
+- Forward kinematics for arbitrary kinematic trees, finite-difference and analytic Jacobians, and a regularized Gauss-Newton IK solver.
+- Base and foot trajectories planned from velocity commands and gait contact schedules, extended to uneven terrain.
+- The same code runs on a biped and a hexapod by switching only the robot model.
+- Designed custom hexapod gaits and ran them on the real robot.
+tools:
+- C++
+- Eigen
+- Rigid-body kinematics
+figure: hexapod

@@ -1,0 +1,11 @@
+title: Domino-laying machine
+code: P-11
+order: 12
+place: EPFL
+status: Design plans
+realHardware: false
+summary: A fully mechanical system that places dominoes in sequence along a defined path.
+bullets: []
+tools:
+- CATIA
+figure: domino

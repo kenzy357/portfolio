@@ -1,0 +1,17 @@
+title: RL locomotion policy training
+code: P-05
+order: 6
+place: ETH Zurich
+status: Simulation
+realHardware: false
+summary: Learning-based walking for a legged character in GPU-parallel simulation, trained on cloud GPU nodes.
+bullets:
+- Trained walking policies with reinforcement learning in IsaacGym.
+- Ran training on cloud GPU compute nodes, packaged with Docker.
+tools:
+- Python
+- PyTorch
+- IsaacGym
+- Docker
+- AWS
+figure: rl

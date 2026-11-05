@@ -1,0 +1,90 @@
+intro: Each group links to the projects where I used it.
+groups:
+- icon: network
+  title: Robot learning
+  tagline: Training policies in simulation and moving them onto real robots.
+  tools:
+  - Reinforcement learning
+  - Imitation learning
+  - Supervised learning
+  - PyTorch
+  - IsaacGym
+  - IsaacLab
+  - ManiSkill3
+  - LeRobot
+  usedIn:
+  - visual-rl-robot-arm
+  - rl-locomotion-policy
+- icon: sliders
+  title: Control & optimization
+  tagline: Model-based controllers and optimized motions with constraints.
+  tools:
+  - MPC
+  - Optimal control
+  - Trajectory optimization
+  - Dynamic programming
+  - CasADi
+  - OSQP
+  - MATLAB / Simulink
+  usedIn:
+  - rocket-landing-mpc
+  - biped-trajectory-optimization
+  - engine-idle-speed-controller
+- icon: linkage
+  title: Robotics & locomotion
+  tagline: Kinematics, dynamics and planning for legged and wheeled robots.
+  tools:
+  - Kinematics
+  - Robot dynamics
+  - Legged locomotion
+  - Motion planning
+  - SLAM
+  - Localization
+  usedIn:
+  - kinematic-walking-controller
+  - human-following-unitree
+  - autonomous-rover-erc
+  - motion-planning-algorithms
+- icon: code
+  title: Software & tools
+  tagline: Code and tooling across simulation, robots and cloud training.
+  tools:
+  - Python
+  - C++
+  - C
+  - ROS2
+  - MuJoCo
+  - Isaac Sim
+  - Docker
+  - Git / GitHub
+  - Linux
+  - LabView
+  - YOLOv8
+  usedIn:
+  - kinematic-walking-controller
+  - human-following-unitree
+  - biped-trajectory-optimization
+  - rl-locomotion-policy
+  - autonomous-rover-erc
+  - sudoku-solver
+- icon: cube
+  title: CAD & simulation
+  tagline: Mechanism design from sketch to printed or detailed parts.
+  tools:
+  - SolidWorks
+  - CATIA
+  - Abaqus
+  - 3D printing
+  usedIn:
+  - rotational-plasma-engine
+  - mechanical-pegasus
+  - domino-laying-machine
+- icon: sigma
+  title: Mathematics
+  tagline: The tools underneath the control and learning work.
+  tools:
+  - Linear algebra
+  - Probability theory
+  - Optimization
+  - Numerical methods
+  usedIn: []

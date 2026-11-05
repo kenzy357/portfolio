@@ -1,0 +1,15 @@
+title: Human-following Unitree quadruped
+code: P-13
+order: 3
+place: Hackathon 2026
+status: Real quadruped
+realHardware: true
+summary: Vision-based person following, implemented and tested on a real Unitree robot.
+bullets:
+- 'Built a controller that makes a Unitree quadruped follow a person: YOLOv8 person detection generates velocity commands sent to the robot''s high-level sport-mode interface over ROS2.'
+- Deployed and tested the full pipeline on the physical robot, using its state feedback and command topics through ROS2.
+tools:
+- Python
+- ROS2
+- YOLOv8
+figure: unitree

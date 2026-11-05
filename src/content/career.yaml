@@ -1,0 +1,98 @@
+entries:
+- kind: experience
+  icon: bulb
+  dates: Sep 2026 – now
+  current: true
+  title: Innovation Engineer, ETH EXL × Johnson & Johnson
+  org: Zug, Switzerland
+  award: ''
+  description: ''
+  bullets:
+  - Interdisciplinary student team on-site at J&J in an industry-partnered innovation program, solving real problems pitched by J&J engineers.
+  - Lean de-risking to isolate the critical uncertainty of each project, then quick validation with low-fidelity prototypes.
+  - Build MVPs in ETH’s makerspace and present validated proof-of-concept solutions to J&J.
+  chipsLabel: ''
+  chips: []
+  projects: []
+- kind: experience
+  icon: rover
+  dates: Nov 2025 – Sep 2026
+  current: false
+  title: Autonomous Navigation Engineer, CRATER
+  org: ETH Rover Team · Zurich, Switzerland
+  award: Won the autonomous navigation task · European Rover Challenge 2026
+  description: ''
+  bullets:
+  - Won in the team’s first participation, after building the rover from scratch.
+  - Designed the rover kinematic motion model (C++, ROS2) mapping global velocity commands to per-wheel steering and drive commands across multiple driving modes.
+  - Built the gamepad teleoperation interface and integrated the controller into the full autonomous navigation stack, validated in Gazebo.
+  - Developed control strategies for autonomous navigation in unstructured outdoor terrain.
+  chipsLabel: ''
+  chips: []
+  projects:
+  - autonomous-rover-erc
+- kind: education
+  icon: cap
+  dates: Sep 2025 – now
+  current: true
+  title: M.Sc. Mechanical Engineering, ETH Zurich
+  org: Robotics and Control · Zurich
+  award: ''
+  description: ''
+  bullets: []
+  chipsLabel: Relevant courses
+  chips:
+  - Planning & Decision Making for Autonomous Robots
+  - Robot Dynamics
+  - Robot Learning
+  - Machine Learning
+  - Dynamic Programming & Optimal Control
+  - Computational Control
+  - Autonomous Mobile Robots
+  projects:
+  - visual-rl-robot-arm
+  - motion-planning-algorithms
+  - rocket-landing-mpc
+  - biped-trajectory-optimization
+  - kinematic-walking-controller
+  - rl-locomotion-policy
+- kind: experience
+  icon: flask
+  dates: Feb 2025 – Jun 2025
+  current: false
+  title: Research Intern, Extreme Mechanics Lab
+  org: POSTECH · South Korea
+  award: ''
+  description: Contributed to experiments and simulations on Kresling-pattern structures.
+  bullets: []
+  chipsLabel: ''
+  chips: []
+  projects: []
+- kind: education
+  icon: globe
+  dates: Sep 2024 – Jun 2025
+  current: false
+  title: Exchange Year, POSTECH
+  org: Mechanical Engineering · Pohang, South Korea
+  award: ''
+  description: Studied on the other side of the world; learned to collaborate in an international, multicultural team and to adapt quickly to a new academic and cultural environment.
+  bullets: []
+  chipsLabel: ''
+  chips: []
+  projects:
+  - rotational-plasma-engine
+  - mechanical-pegasus
+- kind: education
+  icon: cap
+  dates: Sep 2022 – Jun 2025
+  current: false
+  title: B.Sc. Mechanical Engineering, EPFL
+  org: Lausanne, Switzerland
+  award: ''
+  description: A solid engineering foundation in mathematics, physics, programming and informatics, and the engineering tools of the field.
+  bullets: []
+  chipsLabel: ''
+  chips: []
+  projects:
+  - sudoku-solver
+  - domino-laying-machine

@@ -1,0 +1,11 @@
+title: Motion planning algorithms
+code: P-08
+order: 9
+place: ETH Zurich
+status: Course series
+realHardware: false
+summary: Shortest-path search, sampling-based planners, collision checking, planning under uncertainty and multi-agent coordination.
+bullets: []
+tools:
+- Python
+figure: rrt

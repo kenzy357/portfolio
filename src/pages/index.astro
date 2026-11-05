@@ -1,0 +1,206 @@
+---
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '../../keystatic.config';
+import { icon } from '../lib/icons';
+import '../styles/global.css';
+
+const reader = createReader(process.cwd(), keystaticConfig);
+const site = await reader.singletons.site.readOrThrow();
+const career = await reader.singletons.career.readOrThrow();
+const skills = await reader.singletons.skills.readOrThrow();
+const projects = (await reader.collections.projects.all()).sort(
+  (a, b) => (a.entry.order ?? 99) - (b.entry.order ?? 99)
+);
+
+const bySlug = new Map(projects.map((p) => [p.slug, p.entry]));
+const codeOf = (slug: string | null) => (slug && bySlug.get(slug)?.code) || '';
+const titleOf = (slug: string | null) => (slug && bySlug.get(slug)?.title) || '';
+
+const figures = import.meta.glob('../figures/*.svg', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+const figure = (name: string) => figures[`../figures/${name}.svg`] ?? '';
+const linkedinHost = site.linkedin ? 'LinkedIn ↗' : '';
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>{site.name}</title>
+  <meta name="description" content={site.intro}>
+  <meta property="og:title" content={site.name}>
+  <meta property="og:description" content={site.intro}>
+  {site.photo && <meta property="og:image" content={site.photo}>}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#top">{site.name.split(' ').map((w) => w[0]).join('')} <span>/</span> Portfolio</a>
+  <nav aria-label="Sections">
+    <a href="#projects">Projects</a>
+    <a href="#career">Career</a>
+    <a href="#skills">Skills</a>
+    <a class="opt" href="#contact">Contact</a>
+  </nav>
+</div></header>
+
+<main class="wrap" id="top">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">{site.eyebrow}</div>
+      <h1>{site.name}</h1>
+      <p class="lede">{site.intro}</p>
+      {site.currently && <p class="focus">{site.currently}</p>}
+      <div class="buttons">
+        <a class="btn primary" href="#projects">View projects</a>
+        <button class="btn copy" type="button" data-email={site.email}>Copy email</button>
+        {site.linkedin && <a class="btn" href={site.linkedin} target="_blank" rel="noopener">{linkedinHost}</a>}
+      </div>
+      <div class="stats">
+        {site.stats.map((s) => <span><b>{s.value}</b> {s.label}</span>)}
+        {site.location && <span>{site.location}</span>}
+      </div>
+    </div>
+    {site.photo && (
+      <div class="photo frame">
+        <img src={site.photo} alt={`Portrait of ${site.name}`}>
+        {site.photoCaption && <div class="caption">{site.photoCaption}</div>}
+      </div>
+    )}
+  </div>
+
+  <div class="divider"></div>
+
+  <section id="projects">
+    <div class="head">
+      <div class="eyebrow">01 // projects</div>
+      <h2>Projects</h2>
+      <p class="intro">Ordered by relevance to robotics and control. Drawings are schematic.</p>
+    </div>
+    <div class="grid">
+      {projects.map(({ slug, entry: p }) => (
+        <article class="card" id={slug}>
+          {(p.image || p.figure !== 'none') && (
+            <div class="fig">
+              {p.image ? <img src={p.image} alt={p.title} loading="lazy"> : <Fragment set:html={figure(p.figure)} />}
+            </div>
+          )}
+          <div class="body">
+            <div class="meta">
+              <span class="code">{p.code} // {p.place}</span>
+              <span class={p.realHardware ? 'status hw' : 'status'}>{p.status}</span>
+            </div>
+            <h3>{p.title}</h3>
+            <p>{p.summary}</p>
+            {(p.bullets.length > 0 || p.link) && (
+              <details><summary>Details</summary>
+                {p.bullets.length > 0 && <ul>{p.bullets.map((b) => <li>{b}</li>)}</ul>}
+                {p.link && <p class="plink"><a href={p.link} target="_blank" rel="noopener">Open link ↗</a></p>}
+              </details>
+            )}
+            <div class="tools">{p.tools.map((t) => <span>{t}</span>)}</div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="career">
+    <div class="head">
+      <div class="eyebrow">02 // career &amp; education</div>
+      <h2>Career &amp; Education</h2>
+    </div>
+    <div class="timeline">
+      {career.entries.map((e, i) => (
+        <div class={`tl ${i % 2 === 0 ? 'left' : 'right'}${e.kind === 'education' ? ' edu' : ''}`} style={`grid-row:${i + 1}/span 2`}>
+          <div class="tc">
+            <div class="when">
+              <span class={e.current ? 'now' : undefined}>{e.dates}</span>
+              <span class="kind">{e.kind === 'education' ? 'Education' : 'Experience'}</span>
+            </div>
+            <h3>{e.title}</h3>
+            {e.org && <div class="org">{e.org}</div>}
+            {e.award && <div class="award">{e.award}</div>}
+            {e.description && <p>{e.description}</p>}
+            {e.bullets.length > 0 && <ul class="pts">{e.bullets.map((b) => <li>{b}</li>)}</ul>}
+            {e.chips.length > 0 && <>
+              <div class="label">{e.chipsLabel || 'Skills developed'}</div>
+              <ul class="chips">{e.chips.map((c) => <li>{c}</li>)}</ul>
+            </>}
+            {e.projects.length > 0 && <>
+              <div class="label">Projects</div>
+              <ul class="plinks">
+                {e.projects.map((s) => s && <li><a href={`#${s}`} data-proj><span>{codeOf(s)}</span>{titleOf(s)}</a></li>)}
+              </ul>
+            </>}
+          </div>
+          <div class="node" set:html={icon(e.icon)} />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="skills">
+    <div class="head">
+      <div class="eyebrow">03 // skills</div>
+      <h2>What I work with</h2>
+      {skills.intro && <p class="intro">{skills.intro}</p>}
+    </div>
+    <div class="skills">
+      {skills.groups.map((g) => (
+        <article class="skill">
+          <div class="sh"><span class="ico" set:html={icon(g.icon)} /><h3>{g.title}</h3></div>
+          {g.tagline && <p>{g.tagline}</p>}
+          <ul class="chips">{g.tools.map((t) => <li>{t}</li>)}</ul>
+          {g.usedIn.length > 0 && (
+            <div class="used">Used in {g.usedIn.map((s) => s && <a href={`#${s}`} data-proj>{codeOf(s)}</a>)}</div>
+          )}
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="contact" id="contact">
+    <div class="eyebrow" style="color:var(--dim)">04 // contact</div>
+    <h2>{site.contactTitle}</h2>
+    <p>{site.contactText}</p>
+    <div class="addr">{site.email}</div>
+    <div class="buttons">
+      <button class="btn primary copy" type="button" data-email={site.email}>Copy email</button>
+      {site.linkedin && <a class="btn" href={site.linkedin} target="_blank" rel="noopener">LinkedIn ↗</a>}
+    </div>
+  </section>
+
+  <footer><span>{site.name} // {new Date().getFullYear()}</span><a href="#top" style="text-decoration:none">Back to top ↑</a></footer>
+</main>
+<div class="toast" id="toast" hidden>Email copied</div>
+
+<script is:inline>
+(function(){
+  var t=document.getElementById('toast');
+  function show(m){t.textContent=m;t.hidden=false;clearTimeout(show.h);show.h=setTimeout(function(){t.hidden=true},1800)}
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var e=b.dataset.email;
+      try{navigator.clipboard.writeText(e).then(function(){show('Email copied')},function(){show(e)})}catch(_){show(e)}
+    });
+  });
+  document.querySelectorAll('a[data-proj]').forEach(function(a){
+    a.addEventListener('click',function(){
+      var c=document.querySelector(a.getAttribute('href')); if(!c) return;
+      c.classList.add('flash'); setTimeout(function(){c.classList.remove('flash')},1400);
+    });
+  });
+})();
+</script>
+</body>
+</html>

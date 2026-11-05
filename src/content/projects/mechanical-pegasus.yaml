@@ -1,0 +1,12 @@
+title: 3D-printed mechanical Pegasus
+code: P-10
+order: 11
+place: POSTECH
+status: Built
+realHardware: true
+summary: A mechanism that simulates flight with articulated wings, made only from 3D-printed parts.
+bullets: []
+tools:
+- 3D printing
+- SolidWorks
+figure: pegasus

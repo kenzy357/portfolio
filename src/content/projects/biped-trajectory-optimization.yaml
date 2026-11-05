@@ -1,0 +1,15 @@
+title: Trajectory optimization for a biped
+code: P-04
+order: 5
+place: ETH Zurich
+status: Simulation
+realHardware: false
+summary: Dynamics-aware walking and jumping on a 12-DoF biped using reduced-order models.
+bullets:
+- Formulated the optimization problems (decision variables, objectives, constraints) for walking and jumping.
+- 'Four models: linear inverted pendulum, variable-height inverted pendulum, single rigid body and centroidal dynamics.'
+- Compared fidelity against tractability and verified the motions in MuJoCo.
+tools:
+- Python
+- MuJoCo
+figure: biped

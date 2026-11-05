@@ -1,0 +1,13 @@
+title: Sudoku solver
+code: P-12
+order: 13
+place: EPFL
+status: Software
+realHardware: false
+summary: Reads a sudoku from a photo and solves it, combining computer vision and logic programming.
+bullets: []
+tools:
+- C
+- MATLAB
+- LabView
+figure: sudoku
