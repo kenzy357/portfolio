@@ -123,6 +123,7 @@ const linkedinHost = site.linkedin ? 'LinkedIn ↗' : '';
               <span class={e.current ? 'now' : undefined}>{e.dates}</span>
               <span class="kind">{e.kind === 'education' ? 'Education' : 'Experience'}</span>
             </div>
+            {e.company && <div class="company">{e.company}</div>}
             <h3>{e.title}</h3>
             {e.org && <div class="org">{e.org}</div>}
             {e.award && <div class="award">{e.award}</div>}

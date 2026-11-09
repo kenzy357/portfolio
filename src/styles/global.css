@@ -112,6 +112,7 @@ details li::marker{color:var(--dim)}
 .tl .when{font:400 11.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--white);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
 .tl .when .kind{color:var(--dim)}
 .tl h3{font:700 19px/1.15 var(--sans);letter-spacing:-.02em}
+.tl .company{font:700 13px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
 .tl .org{font:400 12px var(--mono);letter-spacing:.06em;color:var(--dim)}
 .tl p{margin:0;font-size:15px;color:var(--dim)}
 .label{font:400 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;margin-top:6px}

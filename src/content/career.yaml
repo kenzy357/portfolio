@@ -1,77 +1,71 @@
 entries:
-  - kind: experience
-    icon: bulb
-    dates: Sep 2026 – now
-    current: true
-    title: Innovation Engineer, ETH EXL × Johnson & Johnson
-    org: Zug, Switzerland
-    bullets:
-      - >-
-        Work in an interdisciplinary student team in Zug on real industry
-        problems pitched by J&J engineers, as part of an industry-partnered
-        innovation program
-      - >-
-        Build MVPs in ETH’s makerspace and present validated proof-of-concept
-        solutions to J&J.
-    chips: []
-  - kind: experience
-    icon: rover
-    dates: Nov 2025 – Sep 2026
-    current: false
-    title: Autonomous Navigation Engineer, CRATER
-    org: Zurich, Switzerland
-    award: Won the autonomous navigation task · European Rover Challenge 2026
-    description: >-
-      As a member of the Autonomous Navigation and Controls team we developed
-      control strategies for autonomous navigation in unstructured outdoor
-      terrain.
-    bullets: []
-    chips: []
-  - kind: education
-    icon: cap
-    dates: Sep 2025 – now
-    current: true
-    title: M.Sc. Mechanical Engineering, ETH Zurich
-    org: Robotics and Control · Zurich
-    bullets: []
-    chipsLabel: Relevant courses
-    chips:
-      - Planning & Decision Making for Autonomous Robots
-      - Robot Dynamics
-      - Robot Learning
-      - Machine Learning
-      - Dynamic Programming & Optimal Control
-      - Computational Control
-      - Autonomous Mobile Robots
-  - kind: experience
-    icon: flask
-    dates: Feb 2025 – Jun 2025
-    current: false
-    title: Research Intern, Extreme Mechanics Lab
-    org: POSTECH · South Korea
-    description: Contributed to experiments and simulations on Kresling-pattern structures.
-    bullets: []
-    chips: []
-  - kind: education
-    icon: globe
-    dates: Sep 2024 – Jun 2025
-    current: false
-    title: Exchange Year, POSTECH
-    org: Pohang, South Korea
-    description: >-
-      Studied on the other side of the world; learned to collaborate in an
-      international, multicultural team and to adapt quickly to a new academic
-      and cultural environment.
-    bullets: []
-    chips: []
-  - kind: education
-    icon: cap
-    dates: Sep 2022 – Jun 2025
-    current: false
-    title: B.Sc. Mechanical Engineering, EPFL
-    org: Lausanne, Switzerland
-    description: >-
-      A solid engineering foundation in mathematics, physics, programming and
-      informatics, and the engineering tools of the field.
-    bullets: []
-    chips: []
+- kind: experience
+  icon: bulb
+  dates: Sep 2026 – now
+  current: true
+  company: ETH Exploration Lab × Johnson & Johnson
+  title: Innovation Engineer
+  org: Zug, Switzerland
+  bullets:
+  - Work in an interdisciplinary student team in Zug on real industry problems pitched by J&J engineers, as part of an industry-partnered innovation program
+  - Build MVPs in ETH’s makerspace and present validated proof-of-concept solutions to J&J.
+  chips: []
+- kind: experience
+  icon: rover
+  dates: Nov 2025 – Sep 2026
+  current: false
+  company: CRATER · ETH Zurich
+  title: Autonomous Navigation Engineer
+  org: Zurich, Switzerland
+  award: Won the autonomous navigation task · European Rover Challenge 2026
+  description: As a member of the Autonomous Navigation and Controls team we developed control strategies for autonomous navigation in unstructured outdoor terrain.
+  bullets: []
+  chips: []
+- kind: education
+  icon: cap
+  dates: Sep 2025 – now
+  current: true
+  company: ETH Zurich
+  title: M.Sc. Mechanical Engineering
+  org: Robotics and Control · Zurich
+  bullets: []
+  chipsLabel: Relevant courses
+  chips:
+  - Planning & Decision Making for Autonomous Robots
+  - Robot Dynamics
+  - Robot Learning
+  - Machine Learning
+  - Dynamic Programming & Optimal Control
+  - Computational Control
+  - Autonomous Mobile Robots
+  description: Focused on robotics, control and learning, with hands-on projects from simulation to real robots.
+- kind: experience
+  icon: flask
+  dates: Feb 2025 – Jun 2025
+  current: false
+  company: Extreme Mechanics Lab · POSTECH
+  title: Research Intern
+  org: South Korea
+  description: Contributed to experiments and simulations on Kresling-pattern structures.
+  bullets: []
+  chips: []
+- kind: education
+  icon: globe
+  dates: Sep 2024 – Jun 2025
+  current: false
+  company: POSTECH
+  title: Exchange Year
+  org: Pohang, South Korea
+  description: Studied on the other side of the world; learned to collaborate in an international, multicultural team and to adapt quickly to a new academic and cultural environment.
+  bullets: []
+  chips: []
+- kind: education
+  icon: cap
+  dates: Sep 2022 – Jun 2025
+  current: false
+  company: EPFL
+  title: B.Sc. Mechanical Engineering
+  org: Lausanne, Switzerland
+  description: A solid engineering foundation in mathematics, physics, programming and informatics, and the engineering tools of the field.
+  bullets: []
+  chips: []
