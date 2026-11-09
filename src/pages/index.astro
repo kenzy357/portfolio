@@ -92,7 +92,7 @@ const linkedinHost = site.linkedin ? 'LinkedIn ↗' : '';
               <span class={p.realHardware ? 'status hw' : 'status'}>{p.status}</span>
             </div>
             <h3>{p.title}</h3>
-            <p>{p.summary}</p>
+            {p.bullets.length === 0 && <p>{p.summary}</p>}
             {(p.bullets.length > 0 || p.link) && (
               <details><summary>Details</summary>
                 {p.bullets.length > 0 && <ul>{p.bullets.map((b) => <li>{b}</li>)}</ul>}
