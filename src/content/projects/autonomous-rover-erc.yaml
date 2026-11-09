@@ -4,13 +4,20 @@ order: 7
 place: ETH CRATER
 status: ERC 2026 · nav task winner
 realHardware: true
-summary: Kinematic motion model for a planetary rover with several drive modes. The team won the autonomous navigation task at the European Rover Challenge 2026, its first participation.
+summary: >-
+  Kinematic motion model for a planetary rover with several drive modes. The
+  team won the autonomous navigation task at the European Rover Challenge 2026,
+  its first participation.
 bullets:
-- Maps global velocity commands to per-wheel steering and drive motor commands; integrated into the full autonomous navigation stack.
-- Implemented the gamepad interface for real-time manual control.
-- Integrated in a ROS2 architecture and validated in simulation (Gazebo).
+  - >-
+    Maps global velocity commands to per-wheel steering and drive motor
+    commands; integrated into the full autonomous navigation stack.
+  - Implemented the gamepad interface for real-time manual control.
+  - >-
+    Developed the complete Gazebo simulation setup within a ROS2 architecture,
+    enabling controller validation before hardware deployment.
 tools:
-- C++
-- ROS2
-- Gazebo
+  - C++
+  - ROS2
+  - Gazebo
 figure: rover
