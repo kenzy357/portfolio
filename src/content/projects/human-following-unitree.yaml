@@ -12,7 +12,7 @@ bullets:
     sport-mode interface over ROS2.
   - >-
     Deployed and tested the full pipeline on the physical robot, using its state
-    feedback and command topics through ROS2.
+    feedback and command topics through the Unitree Go2 software stack.
 tools:
   - Python
   - ROS2
