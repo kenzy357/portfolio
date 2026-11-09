@@ -168,6 +168,12 @@ export default config({
           directory: 'public/images/projects',
           publicPath: '/images/projects/',
         }),
+        video: fields.file({
+          label: 'Video (optional)',
+          description: 'Short silent loop, MP4, under ~10 MB. Shown instead of the photo; the photo is used as its preview.',
+          directory: 'public/videos/projects',
+          publicPath: '/videos/projects/',
+        }),
         figure: fields.select({ label: 'Drawing', options: figureOptions as any, defaultValue: 'none' }),
         link: fields.url({ label: 'Link (optional)', description: 'GitHub, video or write-up' }),
       },
