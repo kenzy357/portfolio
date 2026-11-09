@@ -13,6 +13,7 @@ const figureOptions = [
   { label: 'Rover steering', value: 'rover' },
   { label: 'Engine idle speed', value: 'idle' },
   { label: 'Planner tree', value: 'rrt' },
+  { label: 'Docking planner and robot fleet', value: 'planning' },
   { label: 'Plasma thrusters', value: 'plasma' },
   { label: 'Pegasus wing linkage', value: 'pegasus' },
   { label: 'Domino path', value: 'domino' },
