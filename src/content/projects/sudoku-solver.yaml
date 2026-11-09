@@ -2,10 +2,13 @@ title: Sudoku solver
 place: EPFL
 status: Software
 realHardware: false
-summary: Reads a sudoku from a photo and solves it, combining computer vision and logic programming.
+summary: >-
+  Reads a sudoku from a photo and solves it, combining computer vision and logic
+  programming.
 bullets: []
 tools:
-- C
-- MATLAB
-- LabView
+  - C
+  - MATLAB
+  - LabView
+image: /images/projects/sudoku-solver/image.jpg
 figure: sudoku
