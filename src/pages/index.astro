@@ -132,12 +132,6 @@ const linkedinHost = site.linkedin ? 'LinkedIn ↗' : '';
               <div class="label">{e.chipsLabel || 'Skills developed'}</div>
               <ul class="chips">{e.chips.map((c) => <li>{c}</li>)}</ul>
             </>}
-            {e.projects.length > 0 && <>
-              <div class="label">Projects</div>
-              <ul class="plinks">
-                {e.projects.map((s) => s && <li><a href={`#${s}`} data-proj>{titleOf(s)}</a></li>)}
-              </ul>
-            </>}
           </div>
           <div class="node" set:html={icon(e.icon)} />
         </div>

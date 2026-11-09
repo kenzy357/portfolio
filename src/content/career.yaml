@@ -13,7 +13,6 @@ entries:
   - Build MVPs in ETH’s makerspace and present validated proof-of-concept solutions to J&J.
   chipsLabel: ''
   chips: []
-  projects: []
 - kind: experience
   icon: rover
   dates: Nov 2025 – Sep 2026
@@ -29,8 +28,6 @@ entries:
   - Developed control strategies for autonomous navigation in unstructured outdoor terrain.
   chipsLabel: ''
   chips: []
-  projects:
-  - autonomous-rover-erc
 - kind: education
   icon: cap
   dates: Sep 2025 – now
@@ -49,13 +46,6 @@ entries:
   - Dynamic Programming & Optimal Control
   - Computational Control
   - Autonomous Mobile Robots
-  projects:
-  - visual-rl-robot-arm
-  - motion-planning-algorithms
-  - rocket-landing-mpc
-  - biped-trajectory-optimization
-  - kinematic-walking-controller
-  - rl-locomotion-policy
 - kind: experience
   icon: flask
   dates: Feb 2025 – Jun 2025
@@ -67,7 +57,6 @@ entries:
   bullets: []
   chipsLabel: ''
   chips: []
-  projects: []
 - kind: education
   icon: globe
   dates: Sep 2024 – Jun 2025
@@ -79,9 +68,6 @@ entries:
   bullets: []
   chipsLabel: ''
   chips: []
-  projects:
-  - rotational-plasma-engine
-  - mechanical-pegasus
 - kind: education
   icon: cap
   dates: Sep 2022 – Jun 2025
@@ -93,6 +79,3 @@ entries:
   bullets: []
   chipsLabel: ''
   chips: []
-  projects:
-  - sudoku-solver
-  - domino-laying-machine

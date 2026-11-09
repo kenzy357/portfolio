@@ -120,7 +120,6 @@ export default config({
             bullets: textList('Bullet points', 'Bullet'),
             chipsLabel: fields.text({ label: 'Tag list heading', description: 'e.g. Relevant courses' }),
             chips: textList('Tags', 'Tag'),
-            projects: projectLinks('Linked projects'),
           }),
           { label: 'Entries (top = most recent)', itemLabel: (p) => `${p.fields.dates.value} · ${p.fields.title.value}` }
         ),
