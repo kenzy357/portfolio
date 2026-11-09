@@ -1,11 +1,13 @@
 title: Compact rotational plasma engine
 order: 10
 place: POSTECH
-status: CAD design
-realHardware: false
-summary: End-to-end design of a compact mechanism with two independent plasma thrusters, rotating to adjust thrust direction.
+status: Built
+realHardware: true
+summary: >-
+  End-to-end design of a compact mechanism with two independent plasma
+  thrusters, rotating to adjust thrust direction.
 bullets: []
 tools:
-- SolidWorks
-- CAD
+  - SolidWorks
+  - CAD
 figure: plasma
