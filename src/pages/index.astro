@@ -13,7 +13,6 @@ const projects = (await reader.collections.projects.all()).sort(
 );
 
 const bySlug = new Map(projects.map((p) => [p.slug, p.entry]));
-const codeOf = (slug: string | null) => (slug && bySlug.get(slug)?.code) || '';
 const titleOf = (slug: string | null) => (slug && bySlug.get(slug)?.title) || '';
 
 const figures = import.meta.glob('../figures/*.svg', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
@@ -90,7 +89,7 @@ const linkedinHost = site.linkedin ? 'LinkedIn ↗' : '';
           )}
           <div class="body">
             <div class="meta">
-              <span class="code">{p.code} // {p.place}</span>
+              <span class="code">{p.place}</span>
               <span class={p.realHardware ? 'status hw' : 'status'}>{p.status}</span>
             </div>
             <h3>{p.title}</h3>
@@ -135,7 +134,7 @@ const linkedinHost = site.linkedin ? 'LinkedIn ↗' : '';
             {e.projects.length > 0 && <>
               <div class="label">Projects</div>
               <ul class="plinks">
-                {e.projects.map((s) => s && <li><a href={`#${s}`} data-proj><span>{codeOf(s)}</span>{titleOf(s)}</a></li>)}
+                {e.projects.map((s) => s && <li><a href={`#${s}`} data-proj>{titleOf(s)}</a></li>)}
               </ul>
             </>}
           </div>
@@ -160,7 +159,7 @@ const linkedinHost = site.linkedin ? 'LinkedIn ↗' : '';
           {g.tagline && <p>{g.tagline}</p>}
           <ul class="chips">{g.tools.map((t) => <li>{t}</li>)}</ul>
           {g.usedIn.length > 0 && (
-            <div class="used">Used in {g.usedIn.map((s) => s && <a href={`#${s}`} data-proj>{codeOf(s)}</a>)}</div>
+            <div class="used">Used in {g.usedIn.map((s) => s && <a href={`#${s}`} data-proj>{titleOf(s)}</a>)}</div>
           )}
         </article>
       ))}

@@ -1,13 +1,14 @@
 title: Engine idle speed controller
-code: P-07
 order: 8
 place: ETH Zurich
 status: Real engine
 realHardware: true
-summary: Model-based controller for a spark-ignited engine using throttle and ignition timing, validated on a real engine.
+summary: Model-based LQGI controller for a 2.5 L SI engine, validated on a real engine.
 bullets:
-- Modelled the full engine dynamics.
-- Designed a feedback controller that holds idle speed under varying load.
+- Built a nonlinear mean-value model of the engine (throttle, intake manifold, torque generation, inertia).
+- Identified model parameters from test-bench data and validated the model on unseen measurements.
+- Designed an LQG controller with integral action, coordinating throttle and ignition retardation to reject load disturbances with zero steady-state error.
+- Discretized the controller and validated it on the real engine under random load changes.
 tools:
 - MATLAB
 - Simulink

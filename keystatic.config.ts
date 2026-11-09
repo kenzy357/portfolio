@@ -139,10 +139,9 @@ export default config({
       path: 'src/content/projects/*',
       slugField: 'title',
       format: { data: 'yaml' },
-      columns: ['code', 'order'],
+      columns: ['order'],
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
-        code: fields.text({ label: 'Code', description: 'Shown on the card, e.g. P-14' }),
         order: fields.integer({ label: 'Order on the page', description: 'Lower numbers come first', defaultValue: 99 }),
         place: fields.text({ label: 'Where', description: 'e.g. ETH Zurich' }),
         status: fields.text({ label: 'Status label', description: 'e.g. Real robot, Simulation' }),
