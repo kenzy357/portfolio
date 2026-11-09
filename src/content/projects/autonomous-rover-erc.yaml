@@ -19,3 +19,4 @@ tools:
   - ROS2
   - Gazebo
 figure: rover
+image: /images/projects/autonomous-rover-erc.jpg

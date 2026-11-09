@@ -16,3 +16,4 @@ tools:
   - ROS2
   - YOLOv8
 figure: unitree
+image: /images/projects/human-following-unitree.jpg

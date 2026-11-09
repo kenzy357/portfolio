@@ -16,3 +16,4 @@ tools:
   - Python
   - MuJoCo
 figure: biped
+image: /images/projects/biped-trajectory-optimization.jpg

@@ -20,3 +20,4 @@ tools:
   - C++
   - Rigid-body kinematics
 figure: hexapod
+image: /images/projects/kinematic-walking-controller.jpg
