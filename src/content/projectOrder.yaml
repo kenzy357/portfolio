@@ -1,14 +1,14 @@
 projects:
-- visual-rl-robot-arm
-- kinematic-walking-controller
-- human-following-unitree
-- rocket-landing-mpc
-- biped-trajectory-optimization
-- rl-locomotion-policy
-- autonomous-rover-erc
-- engine-idle-speed-controller
-- motion-planning-algorithms
-- rotational-plasma-engine
-- mechanical-pegasus
-- domino-laying-machine
-- sudoku-solver
+  - visual-rl-robot-arm
+  - autonomous-rover-erc
+  - human-following-unitree
+  - rl-locomotion-policy
+  - kinematic-walking-controller
+  - motion-planning-algorithms
+  - rocket-landing-mpc
+  - biped-trajectory-optimization
+  - engine-idle-speed-controller
+  - sudoku-solver
+  - rotational-plasma-engine
+  - domino-laying-machine
+  - mechanical-pegasus
