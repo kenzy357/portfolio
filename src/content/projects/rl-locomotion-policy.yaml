@@ -13,4 +13,5 @@ tools:
   - IsaacGym
   - Docker
   - AWS
+image: /images/projects/rl-locomotion-policy/image.png
 figure: rl
