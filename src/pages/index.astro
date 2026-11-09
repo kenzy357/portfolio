@@ -76,7 +76,6 @@ const linkedinHost = site.linkedin ? 'LinkedIn ↗' : '';
   <section id="projects">
     <div class="head">
       <h2>Projects</h2>
-      <p class="intro">Ordered by relevance to robotics and control. Drawings are schematic.</p>
     </div>
     <div class="grid">
       {projects.map(({ slug, entry: p }) => (
@@ -92,7 +91,7 @@ const linkedinHost = site.linkedin ? 'LinkedIn ↗' : '';
               <span class={p.realHardware ? 'status hw' : 'status'}>{p.status}</span>
             </div>
             <h3>{p.title}</h3>
-            {p.bullets.length === 0 && <p>{p.summary}</p>}
+            <p>{p.summary}</p>
             {(p.bullets.length > 0 || p.link) && (
               <details><summary>Details</summary>
                 {p.bullets.length > 0 && <ul>{p.bullets.map((b) => <li>{b}</li>)}</ul>}
@@ -146,8 +145,7 @@ const linkedinHost = site.linkedin ? 'LinkedIn ↗' : '';
 
   <section id="skills">
     <div class="head">
-      <h2>What I work with</h2>
-      {skills.intro && <p class="intro">{skills.intro}</p>}
+      <h2>Skills</h2>
     </div>
     <div class="skills">
       {skills.groups.map((g) => (
