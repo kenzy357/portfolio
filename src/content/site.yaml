@@ -8,13 +8,7 @@ photo: /images/photo.jpg
 email: kenzyhasnaoui@gmail.com
 linkedin: https://linkedin.com/in/kenzy-hasnaoui-582230341
 location: Zurich, CH
-stats:
-  - value: '13'
-    label: projects
-  - value: '5'
-    label: on real hardware
-  - value: ERC 2026
-    label: nav winner
+stats: []
 contactTitle: Get in touch
 contactText: >-
   Questions about a project, or want to see one running? Reach me by email or on
