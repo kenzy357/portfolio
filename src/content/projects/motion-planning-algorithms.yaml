@@ -1,13 +1,16 @@
-title: Motion planning algorithms
+title: Planning & Decision Making for Autonomous Robots
 order: 9
 place: ETH Zurich
 status: Course series
 realHardware: false
-summary: >-
-  Shortest-path search, sampling-based planners, collision checking, planning
-  under uncertainty and multi-agent coordination.
-bullets: []
+summary: Graph search, steering, collision checking, trajectory optimization and multi-agent planning.
+bullets:
+  - Implemented graph search (BFS/DFS, Dijkstra, A*), dynamic programming, Dubins path steering and collision checking for robot motion planning.
+  - "Spaceship docking: built a closed-loop planner using successive convexification (SCvx) to reach a target pose and velocity while avoiding planets and moving asteroids, with replanning to recover from external disturbances."
+  - "Multi-agent goal collection: designed a global task allocation and path planning layer for a fleet of differential-drive robots, combined with decentralized local control and collision avoidance using only onboard lidar observations."
 tools:
   - Python
-  - Docker
+  - CVXPY
+  - SymPy
+  - Shapely
 figure: rrt
