@@ -53,7 +53,7 @@ export default config({
     brand: { name: 'Kenzy · Portfolio' },
     navigation: {
       Page: ['site', 'career', 'skills'],
-      Projects: ['projects'],
+      Projects: ['projectOrder', 'projects'],
     },
   },
 
@@ -78,6 +78,19 @@ export default config({
         ),
         contactTitle: fields.text({ label: 'Contact heading' }),
         contactText: fields.text({ label: 'Contact text', multiline: true }),
+      },
+    }),
+
+    projectOrder: singleton({
+      label: 'Project order (drag to reorder)',
+      path: 'src/content/projectOrder',
+      format: { data: 'yaml' },
+      schema: {
+        projects: fields.array(fields.relationship({ label: 'Project', collection: 'projects' }), {
+          label: 'Projects, top = first on the page',
+          description: 'Drag the handle on the left of each row. A project missing from this list is shown last.',
+          itemLabel: (p) => p.value ?? 'Project',
+        }),
       },
     }),
 
@@ -139,10 +152,9 @@ export default config({
       path: 'src/content/projects/*',
       slugField: 'title',
       format: { data: 'yaml' },
-      columns: ['order'],
+      columns: ['status'],
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
-        order: fields.integer({ label: 'Order on the page', description: 'Lower numbers come first', defaultValue: 99 }),
         place: fields.text({ label: 'Where', description: 'e.g. ETH Zurich' }),
         status: fields.text({ label: 'Status label', description: 'e.g. Real robot, Simulation' }),
         realHardware: fields.checkbox({ label: 'Ran on real hardware (red dot)' }),

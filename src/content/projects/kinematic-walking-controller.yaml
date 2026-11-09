@@ -1,5 +1,4 @@
 title: Kinematic walking controller
-order: 2
 place: ETH Zurich
 status: Real hexapod
 realHardware: true
