@@ -42,15 +42,14 @@ groups:
     tools:
       - Python
       - C++
+      - Linux
       - C
       - ROS2
       - MuJoCo
       - Isaac Sim
       - Docker
       - Git / GitHub
-      - Linux
       - LabView
-      - YOLOv8
     usedIn:
       - kinematic-walking-controller
       - human-following-unitree
