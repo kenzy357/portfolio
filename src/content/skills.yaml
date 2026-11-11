@@ -18,8 +18,6 @@ groups:
       - Optimal control
       - Trajectory optimization
       - Dynamic programming
-      - CasADi
-      - OSQP
       - MATLAB / Simulink
     usedIn:
       - rocket-landing-mpc
