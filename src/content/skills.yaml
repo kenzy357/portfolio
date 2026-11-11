@@ -29,10 +29,8 @@ groups:
     tools:
       - Kinematics
       - Robot dynamics
-      - Legged locomotion
       - Motion planning
       - SLAM
-      - Localization
     usedIn:
       - kinematic-walking-controller
       - human-following-unitree
