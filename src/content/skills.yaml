@@ -1,17 +1,15 @@
 groups:
-  - icon: sliders
-    title: Control & optimization
-    tagline: Model-based controllers and optimized motions with constraints.
+  - icon: network
+    title: Robot learning
+    tagline: Training policies in simulation and moving them onto real robots.
     tools:
-      - Optimal control
-      - Trajectory optimization
-      - MPC
-      - Dynamic programming
-      - MATLAB / Simulink
+      - Reinforcement learning
+      - PyTorch
+      - IsaacGym
+      - IsaacLab
     usedIn:
-      - rocket-landing-mpc
-      - biped-trajectory-optimization
-      - engine-idle-speed-controller
+      - visual-rl-robot-arm
+      - rl-locomotion-policy
   - icon: linkage
     title: Robotics & locomotion
     tagline: Kinematics, dynamics and planning for legged and wheeled robots.
@@ -25,17 +23,19 @@ groups:
       - human-following-unitree
       - autonomous-rover-erc
       - motion-planning-algorithms
-  - icon: network
-    title: Robot learning
-    tagline: Training policies in simulation and moving them onto real robots.
+  - icon: sliders
+    title: Control & optimization
+    tagline: Model-based controllers and optimized motions with constraints.
     tools:
-      - Reinforcement learning
-      - PyTorch
-      - IsaacGym
-      - IsaacLab
+      - Optimal control
+      - Trajectory optimization
+      - MPC
+      - Dynamic programming
+      - MATLAB / Simulink
     usedIn:
-      - visual-rl-robot-arm
-      - rl-locomotion-policy
+      - rocket-landing-mpc
+      - biped-trajectory-optimization
+      - engine-idle-speed-controller
   - icon: code
     title: Software & tools
     tagline: Code and tooling across simulation, robots and cloud training.
