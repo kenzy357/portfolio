@@ -4,13 +4,9 @@ groups:
     tagline: Training policies in simulation and moving them onto real robots.
     tools:
       - Reinforcement learning
-      - Imitation learning
-      - Supervised learning
       - PyTorch
       - IsaacGym
       - IsaacLab
-      - ManiSkill3
-      - LeRobot
     usedIn:
       - visual-rl-robot-arm
       - rl-locomotion-policy
